@@ -21,7 +21,8 @@ public class EmbedTomcatSpringMain {
         connector.setPort(8080);
         tomcat.setConnector(connector);
 
-        AnnotationConfigWebApplicationContext appContext = new Annotatio:wq
+        AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
+        appContext.register(HelloConfig.class);
 
         DispatcherServlet dispatcher = new DispatcherServlet(appContext);
 
