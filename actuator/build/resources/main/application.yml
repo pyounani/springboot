@@ -1,0 +1,36 @@
+# ANSI ?? ??
+spring:
+  output:
+    ansi:
+      enabled: always
+
+management:
+  info:
+    java:
+      enabled: true
+    os:
+      enabled: true
+    env:
+      enabled: true
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-components: always
+#      show-details: always
+  endpoints:
+    web:
+      base-path: "/manage"
+      exposure:
+        include: "*"
+  server:
+    port: 8080
+
+info:
+  app:
+    name: hello-actuator
+    company: pyounani
+
+logging:
+  level:
+    hello.controller: debug
